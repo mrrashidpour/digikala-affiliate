@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: digikala affiliate\n"
+"POT-Creation-Date: 2023-04-07 22:49+0330\n"
+"PO-Revision-Date: 2023-04-07 22:50+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: digikala-affiliate.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: digikala-affiliate.php:34
+msgid "digikala affiliate"
+msgstr "افیلیت دیجیکالا"
+
+#: digikala-affiliate.php:90
+msgid "The ID is invalid."
+msgstr "شناسه نامعتبر است."
+
+#: digikala-affiliate.php:93
+msgid "The address cannot be empty."
+msgstr "آدرس نمی تواند خالی باشد."
+
+#: digikala-affiliate.php:98
+msgid "Saved successfully."
+msgstr "با موفقیت ذخیره شد"
+
+#: setting.php:30
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: setting.php:34
+msgid ""
+"After introducing the media, in the link section, register the new link "
+"publicly and enter the created links"
+msgstr ""
+"بعد از معرفی رسانه در بخش لینک لینک جدید را به صورت عمومی ثبت کنید و لینکهای "
+"ساخته شده را وارد کنید"
+
+#: setting.php:37
+msgid ""
+"<a href=\"https://panel.affilio.ir/\" target=\"_blank\">Digikala affiliate "
+"website</a>"
+msgstr ""
+"<a href=\"https://panel.affilio.ir/\" target=\"_blank\">وب سایت افیلیت دیجی "
+"کالا</a>"
+
+#: setting.php:44
+msgid "Links made:"
+msgstr "لینکهای ساخته شده : "
+
+#: setting.php:49
+msgid "Register settings"
+msgstr "ثبت تنظیمات"
+
+#: setting.php:55
+msgid ""
+"Digikala affiliate, a special tool for cooperation in the sale of Digikala\n"
+"        <a href=\"https://mrrashidpour.ir/\" target=\"_blank\">Designer and "
+"programmer Mohammad Reza Rashidpour</a>"
+msgstr ""
+"        افیلیت دیجی کالا، ابزار ویژه همکاری در فروش دیجیکالا |\n"
+"        <a href=\"https://mrrashidpour.ir/\" target=\"_blank\">طراح و برنامه "
+"نویس محمدرضا رشیدپور"
+
+#. Plugin URI of the plugin/theme
+msgid "https://mrrashidpour.ir/digi_affidigiaffi/"
+msgstr "https://mrrashidpour.ir/digi_affidigiaffi/"
+
+#. Description of the plugin/theme
+msgid ""
+"By joining the affiliate system of DigiKala with this plugin, you can easily "
+"become a sales associate of DigiKala."
+msgstr ""
+"با عضویت در سیستم افیلیت دیجیکالا همراه با این افزونه به راحتی همکار فروش "
+"دیجی کالا شوید."
+
+#. Author of the plugin/theme
+msgid "Mohammadreza Rashidpour"
+msgstr "محمدرضا رشیدپور"
+
+#. Author URI of the plugin/theme
+msgid "https://mrrashidpour.ir/"
+msgstr "https://mrrashidpour.ir/"

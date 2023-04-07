@@ -6,8 +6,8 @@
  * Version: 1.1.0
  * Author: Mohammadreza Rashidpour
  * Author URI: https://mrrashidpour.ir/
- * Text Domain: mrra_digi_affidigiaffi
- * Domain Path: /languages/
+ * Text Domain: mrra_digi_affiliate
+ * Domain Path: /languages
  * WC requires at least: 5.0.0
  * Requires PHP: 7.4
  *
@@ -15,14 +15,23 @@
 
 defined( 'ABSPATH' ) || exit;
 
-load_plugin_textdomain('mrra_digi_affidigiaffi');
+load_plugin_textdomain('mrra_digi_affiliate');
 define("digi_affi_IMG_URL", plugin_dir_url(__FILE__) . "/img/");
 register_activation_hook(__FILE__, 'digi_affiInstall');
 register_deactivation_hook(__FILE__, 'digi_affiDelete');
 
+add_action("plugin_loaded" , function ()
+{
+    load_plugin_textdomain( 
+        'mrra_digi_affiliate',
+        false,
+        dirname(plugin_basename(__FILE__)).'/languages'
+    );
+});
+
 function menu_digi_affi() {
-    load_plugin_textdomain('mrra_digi_affidigiaffi');
-    add_menu_page(__('افیلیت دیجی کالا', 'mrra_digi_affidigiaffi'), __('افیلیت دیجی کالا', 'mrra_digi_affidigiaffi'), 'manage_options', basename(__FILE__), 'digi_affiPreferences', digi_affi_IMG_URL . "logo-m.png");
+    load_plugin_textdomain('mrra_digi_affiliate');
+    add_menu_page(__('digikala affiliate', 'mrra_digi_affiliate'), __('digikala affiliate', 'mrra_digi_affiliate'), 'manage_options', basename(__FILE__), 'digi_affiPreferences', digi_affi_IMG_URL . "logo-m.png");
 }
 add_action('admin_menu', 'menu_digi_affi');
 function digi_affi_validate($a) {
@@ -49,7 +58,7 @@ function digi_affiPreferences() {
     if (isset($_POST["widget_id"])) {
         digi_affi::getInstance()->save();
     }
-    load_plugin_textdomain('mrra_digi_affidigiaffi');
+    load_plugin_textdomain('mrra_digi_affiliate');
     echo digi_affi::getInstance()->render();
 }
 function wp_save_digi_affi() {
@@ -78,15 +87,15 @@ function wp_save_digi_affi() {
                 }        
 
             } else {
-                $digi_affiError = "شناسه نامعتبر است.";
+                $digi_affiError = __('The ID is invalid.', 'mrra_digi_affiliate');
             }
         } else {
-            $digi_affiError = "آدرس نمی تواند خالی باشد.";
+            $digi_affiError =  __('The address cannot be empty.', 'mrra_digi_affiliate');
         }
         if($digi_affiError != null){
             set_transient('error_digi_affi', $digi_affiError);
         }else{
-            set_transient('success_digi_affi', "با موفقیت ذخیره شد");
+            set_transient('success_digi_affi', __('Saved successfully.', 'mrra_digi_affiliate'));
         }
 
     }

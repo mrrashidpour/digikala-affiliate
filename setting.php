@@ -26,26 +26,33 @@
             </div>
 		<?php set_transient('success_digi_affi', ''); } ?>
         <div class="digi_affi">
-            <h1>تنظیمات</h1>
+            <h1>
+                <?php _e('Settings', 'mrra_digi_affiliate'); ?>
+            </h1>
             <hr>
-            <p>بعد از معرفی رسانه در بخش لینک لینک جدید را به صورت عمومی ثبت کنید و لینکهای ساخته شده را وارد کنید
+            <p>
+                <?php _e('After introducing the media, in the link section, register the new link publicly and enter the created links', 'mrra_digi_affiliate'); ?>
+            </p>
+            <p>
+                <?php _e('<a href="https://panel.affilio.ir/" target="_blank">Digikala affiliate website</a>', 'mrra_digi_affiliate'); ?>
             </p>
             <br>
             <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" id="form-token">
                 <input type="hidden" value="wp_save_digi_affi" name="action">
                 <div>
-                    <label for="digi_affi_id">لینکهای ساخته شده : </label>
-                    <input type="url" id="digi_affi_id" name="widget_id" autocomplete="off" value="<?php if ($widget_id) {echo $widget_id;} ?>"  />
+                    <label for="digi_affi_id">
+                        <?php _e('Links made:', 'mrra_digi_affiliate'); ?>
+                    </label>
+                    <input type="url" id="digi_affi_id" name="widget_id" autocomplete="off" value="<?php if ($widget_id && $widget_id!="") {echo $widget_id;} ?>" placeholder="https://migmig.affilio.ir/api/v1/Click/{YOUR_BASE64_ENCODED_URL}"  />
                     <br><br>
                     <?php wp_nonce_field( 'digi_affi_nonce'.get_current_user_id() ); ?>
-                    <input type="submit" name="submit" class="button button-primary" value="ثبت تنظیمات">
+                    <input type="submit" name="submit" class="button button-primary" value="<?php _e('Register settings', 'mrra_digi_affiliate'); ?>">
                 </div>
             </form>
-
         </div>
 
     <p style="font-size: 12px;text-align: center">
-        افیلیت دیجی کالا، ابزار ویژه همکاری در فروش دیجیکالا |
-        <a href="https://mrrashidpour.ir/" target="_blank">طراح و برنامه نویس محمدرضا رشیدپور</a>
+        <?php _e('Digikala affiliate, a special tool for cooperation in the sale of Digikala
+        <a href="https://mrrashidpour.ir/" target="_blank">Designer and programmer Mohammad Reza Rashidpour</a>', 'mrra_digi_affiliate'); ?>
     <p>
 </div>
